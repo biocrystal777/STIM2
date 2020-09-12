@@ -26,4 +26,4 @@ class ScreenDims {
         height = dm.getHeight();
     }    
 }
-}
+}   
