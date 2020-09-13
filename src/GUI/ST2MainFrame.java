@@ -1,6 +1,7 @@
 package GUI;
 import javax.swing.*;
 import java.awt.*;
+//import GUI.ST2ScreenDims;
 
 /**
  * @author xxx
@@ -9,8 +10,8 @@ import java.awt.*;
 public class ST2MainFrame extends JFrame {
 
 public ST2MainFrame(){        
-        ScreenDims sD = new ScreenDims();
-        this.setSize(sD.width * 17 / 20, sD.height * 17 / 20);
+        ST2ScreenDims sD = new ST2ScreenDims();
+        this.setSize(sD.initWindowWidth, sD.initWindowHeight);
         this.setLocation(sD.width/20, sD.height/20);
         this.setLayout(null);        
         this.setupGui();
@@ -43,19 +44,6 @@ private void setupToolBar() {
 private void setupSplitPane(){
     mainSplitPane = new ST2MainSplitPane();
     this.add(mainSplitPane,BorderLayout.CENTER);
-}
-
-
-class ScreenDims {    
-    int width;
-    int height;
-
-    public ScreenDims() {
-        GraphicsDevice gds[] = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices();
-        DisplayMode dm = gds[gds.length-1].getDisplayMode(); 
-        width = dm.getWidth();
-        height = dm.getHeight();
-    }
 }
 
 }   

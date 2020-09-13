@@ -5,16 +5,16 @@ import javax.swing.JSplitPane;
 import java.awt.Color;
 
 public class ST2MainSplitPane extends JSplitPane {
-    public ST2MainSplitPane() {
-        leftFrame = new JPanel();
+    public ST2MainSplitPane() {        
         leftFrame.setBackground(new Color(0.5f, 0.15f, 0.0f));
-        this.setLeftComponent(leftFrame);
-        rightFrame = new ST2LogSplitPane();
+        this.setLeftComponent(leftFrame);        
         this.setRightComponent(rightFrame);
+        setContinuousLayout(true);
         this.setVisible(true);        
-        //this.setDividerLocation(* 5 / 6);
+        ST2ScreenDims sD = new ST2ScreenDims();
+       this.setDividerLocation(sD.initWindowWidth / 6);
     }
 
-    private JPanel leftFrame;
-    private ST2LogSplitPane rightFrame;    
+    private JPanel leftFrame = new JPanel();
+    private ST2LogSplitPane rightFrame = new ST2LogSplitPane();    
 }

@@ -7,7 +7,15 @@ public class ST2MainToolBar extends JToolBar {
         super(s);
         this.setFloatable(false);
         this.setRollover(false);
-        JButton button = new JButton("xX");
-        this.add(button);
+        JButton button1 = new JButton("AB");
+        this.add(button1);
+        JButton button2 = new JButton("CD");
+        this.add(button2);
+        JButton button3 = new JButton("EF");
+        this.add(button3);
+        JButton button4 = new JButton("GH");
+        this.add(button4);
+        JButton button5 = new JButton("IJ");
+        this.add(button5);        
     }
 }
